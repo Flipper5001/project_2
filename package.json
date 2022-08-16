@@ -1,0 +1,37 @@
+{
+  "name": "workout_tracker",
+  "version": "1.0.0",
+  "description": "As someone who hasn't seen their toes in 2 years, I want to be able to view and create healthy work out routines, so I can help to manage my body shape and see my toes again... i miss them",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flipper5001/workout_tracker.git"
+  },
+  "keywords": [
+    "group",
+    "workout",
+    "tracker"
+  ],
+  "author": "Flipper5001, Clarky117, Aliceveenathomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flipper5001/workout_tracker/issues"
+  },
+  "homepage": "https://github.com/Flipper5001/workout_tracker#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.19",
+    "sequelize": "^6.21.3"
+  }
+}
