@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <main id="page-container">
+
+        <!-- fix style, just knocking up quick design -->
+        <header class="bg-dark p-3 d-flex justify-content-center text-light">
+            <h1>Work Out Tracker</h1>
+        </header>
+
+        <!-- nav bar -->
+        <nav class="bg-secondary p-2 d-flex text-light">
+            <img class="px-2" src="/images/menu-icon.png" height="50px" width="auto">
+            <h2 class="pt-1">Dashboard</h2>
+
+            <!-- log in position right hand side -->
+
+        </nav>
+
+
+
+
+        <!-- handlebars res.rendered here -->
+        <section> 
+            {{{body}}}
+        </section>
+
+
+
+
+        <!-- footer positioned bottom of page -->
+        <footer id="footer" class="bg-dark p-2 d-flex justify-content-center text-light">
+            <h5>Thanks for visiting our site</h5>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
