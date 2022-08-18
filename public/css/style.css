@@ -1,0 +1,17 @@
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom-right {
+    position: absolute;
+    right: 0px;
+    bottom: -5px;
+    z-index: 1;
+}
