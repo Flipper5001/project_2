@@ -1,0 +1,45 @@
+[
+    {
+        "workout_name": "Sit ups",
+        "description": "90 degree leg bend, laying on your back, sit up until elbows are passed your knees.",
+        "duration": "3 sets 15 reps",
+        "weight_speed": "",
+        "user_id": 3
+    },
+    {
+        "workout_name": "Push ups",
+        "description": "Arms at your side, bend so your elbows so they remain close to your body and lower your body until close to the floor.",
+        "duration": "3 sets 15 reps",
+        "weight_speed": "",
+        "user_id": 4
+    },
+    {
+        "workout_name": "Dead Lifts",
+        "description": "Lift made from a standing position without the aid of bench.",
+        "duration": "3 sets 15 reps",
+        "weight_speed": "20kg",
+        "user_id": 2
+    },
+    {
+        "workout_name": "Treadmill",
+        "description": "Running time.",
+        "duration": "10 minutes",
+        "weight_speed": "15kpmh",
+        "user_id": 5
+    },
+    {
+        "workout_name": "Lat pull down",
+        "description": "While seated, you pull a hanging bar toward you to reach chin level, then release it back up.",
+        "duration": "3 sets 15 reps",
+        "weight_speed": "20kg",
+        "user_id": 1
+    },
+    {
+        "workout_name": "Rowing",
+        "description": "Utilising a rowing machine to simulate the rowing action.",
+        "duration": "10 minutes",
+        "weight_speed": "min 5kmph",
+        "user_id": 3
+    }
+]
+  
