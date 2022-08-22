@@ -15,6 +15,25 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  try {
+    const workoutData = await Workout.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    
+    if (!workoutData) {
+      res.status(404).json({ message: 'No workout with this ID!' });
+      return;
+    }
+    
+    res.status(200).json(workoutData);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const workoutData = await Workout.destroy({
@@ -25,7 +44,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     });
 
     if (!workoutData) {
-      res.status(404).json({ message: 'No workout found with this id!' });
+      res.status(404).json({ message: 'No workout with this ID!' });
       return;
     }
 

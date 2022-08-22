@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['user_name'],
+          attributes: ['name'],
         },
       ],
     });
@@ -27,13 +27,41 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/workout/:id', async (req, res) => {
+router.get('/new', withAuth, (req, res) => {
+  res.render('newworkout', {
+      // check if user is logged in
+      logged_in: req.session.logged_in
+  })
+})
+
+router.get('/edit/:id', withAuth, async (req, res) => {
+  try {
+      const workoutData = await Workout.findByPk(req.params.id, {
+        include: [
+          {
+              model: User,
+              attributes: ['name'],
+          },
+        ],
+      });
+      const workout = workoutData.get({ plain: true });
+
+      res.render('editworkout', {
+          workout,
+          logged_in: req.session.logged_in,
+      });
+  } catch (error) {
+      res.status(500).json(error)
+  }
+})
+
+router.get('/workouts/:id', async (req, res) => {
   try {
     const workoutData = await Workout.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['user_name'],
+          attributes: ['name'],
         },
       ],
     });
@@ -41,7 +69,7 @@ router.get('/workout/:id', async (req, res) => {
     const workout = workoutData.get({ plain: true });
 
     res.render('workout', {
-      ...workout,
+      workout,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -49,34 +77,64 @@ router.get('/workout/:id', async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
+// login auth to ensure user is logged in prior to access page
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Workout }],
-    });
-
-    const user = userData.get({ plain: true });
-
-    res.render('dashboard', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
+      // find all posts
+      const workoutData = await Workout.findAll({
+          where: {
+              user_id: req.session.user_id,
+          },
+          include: [
+              { 
+                  model: User,
+                  attributes: ['name'],
+              }
+          ],
+      });
+      // convert to plain to read data
+      const workouts = workoutData.map((workout) => workout.get({ plain: true }));
+      // render post page with logged in true and display relevant posts
+      res.render('dashboard', {
+          workouts,
+          logged_in: req.session.logged_in
+      });
+  } catch (error) {
+      res.status(500).json(error)
   }
-});
+})
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/dashboard');
-    return;
+    return res.redirect('/dashboard');
   }
 
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    return res.redirect('/dashboard');
+  }
+
+  res.render('signup');
+});
+
+// when post logout, destroy session
+router.get('/logout', (req, res) => {
+  // check if user is actually logged in
+  if (req.session.logged_in) {
+      // end and destroy session
+    req.session.destroy(() => {
+      res.redirect('/login');
+      res.status(204).end();
+    });
+  } else {
+      // if user was not logged in end and send error
+    res.status(404).end();
+  }
 });
 
 module.exports = router;
