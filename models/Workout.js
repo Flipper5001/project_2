@@ -12,7 +12,7 @@ Workout.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    workout_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -24,7 +24,7 @@ Workout.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    weight_speed: {
+    optional: {
       type: DataTypes.STRING,
       allowNull: true,
     },

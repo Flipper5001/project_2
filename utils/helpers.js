@@ -4,5 +4,9 @@ module.exports = {
       // We use the 'toLocaleTimeString()' method to format the time as H:MM:SS AM/PM
       return date.toLocaleTimeString();
     },
+    // formatting date to locale
+    format_date: (date) => {
+      return `${new Date(date).getDate()}/${new Date(date).getMonth()}/${new Date(date).getFullYear()}`;
+    }
   };
   
