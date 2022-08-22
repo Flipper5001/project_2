@@ -2,12 +2,16 @@
 
 {{!-- {{#each}}
 {{/each}} --}}
+<section>
+    <h1>My Dashboard</h1>
+</section>
 
+{{#each workouts as |workout|}}
 <section class="card bg-light mx-4 my-3 col-lg-3 d-flex align-items-stretch">
     <section class="card-body">
 
         {{!-- workout name --}}
-        <h3 class="card-title">{{workout_name}}</h3>
+        <a href="/edit/{{workout.id}}"><h3 class="card-title">{{name}}</h3></a>
 
         {{!-- workout description --}}
         <p class="card-text">{{description}}</p>
@@ -16,7 +20,12 @@
         <p class="card-text">Duration: {{duration}}</p>
         
         {{!-- workout weight or speed --}}
-        <p class="card-text">Weight/Speed: {{weight_speed}}</p>
+        <p class="card-text">Weight/Speed: {{optional}}</p>
 
     </section>
+</section>
+{{/each}}
+<section>
+    {{!-- option to create new post --}}
+    <a href="/new"><h1>+ New Workout</h1></a>
 </section>
