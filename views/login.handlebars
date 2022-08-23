@@ -1,22 +1,27 @@
 {{!-- log in form --}}
 {{!-- user, pass, log in button --}}
-<section>
-  <section>
-    <h3>Login</h3>
+<section class="container d-flex flex-column">
+
+  {{!-- <section class="d-flex justify-content-center py-2">
+    <h3 class="login-font-lg">Login</h3>
+  </section> --}}
+
+  <form class="form login-form content login-font mt-4">
+      <label for="user-login">User Name:</label>
+      <section class="mb-3">
+        <input class="form-input form-opacity" type="text" id="user-login" />
+      </section>
+      <label for="password-login">Password?</label>
+      <section class="mb-3">
+        <input class="form-input form-opacity" type="password" id="password-login" />
+      </section>
+      <button class="submit-btn btn btn-lg my-4 button-margin" type="submit">Login</button>
+  </form>
+
+  <section class="py-3">
+  <a href="/signup">Sign up instead</a>
   </section>
 
-  <form class="form login-form content">
-      <label for="user-login">Username:</label>
-      <section class="mb-3">
-        <input class="form-input" type="text" id="user-login" />
-      </section>
-      <label for="password-login">password:</label>
-      <section class="mb-3">
-        <input class="form-input" type="password" id="password-login" />
-      </section>
-      <button class="submit-btn btn" type="submit">login</button>
-  </form>
-  <a href="/signup">Sign up instead</a>
 </section>
 
 <script src="/js/login.js"></script>

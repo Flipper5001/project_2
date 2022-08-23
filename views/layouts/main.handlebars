@@ -10,51 +10,57 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
 <body>
 
     <main id="page-container">
 
         <!-- fix style, just knocking up quick design -->
-        <header class="bg-dark p-3 d-flex justify-content-center text-light">
-            <h1>Work Out Tracker</h1>
+        <header class="container-fluid p-3 d-flex justify-content-center text-light">
+            <h1 class="header-font">Work Out Tracker</h1>
         </header>
 
         <!-- nav bar -->
-        <nav class="bg-secondary p-2 d-flex text-light">
+        {{!-- <nav class="bg-secondary p-2 d-flex text-light">
             <img class="px-2" src="/images/menu-icon.png" height="50px" width="auto">
-            <h2 class="pt-1">Dashboard</h2>
+            <h2 class="pt-1">Dashboard</h2> --}}
 
             <!-- log in position right hand side -->
 
-        </nav>
-
+            {{!--
+        </nav> --}}
 
         <!-- trying to figure out empty placeholder container to wrap below section -->
 
         <!-- handlebars res.rendered here -->
-        <section> 
+        <section>
             {{{body}}}
         </section>
 
 
         <!-- position image bottom right -->
-        <img class="bottom-right pr-4" src="/images/workout-silhouette.png" height="200" width="auto">
+        {{!-- <img class="bottom-right pr-4" src="/images/workout-silhouette.png" height="200" width="auto"> --}}
 
         <!-- footer positioned bottom of page -->
-        <footer id="footer" class="bg-dark p-2 d-flex justify-content-center text-light">
-            <h5>Thanks for visiting our site</h5>
-            <img class="bottom-right pr-4" src="/images/workout-silhouette.png" height="200" width="auto">
+        <footer id="footer" class="bg-dark pt-2 d-flex justify-content-center text-light">
+            <h5 class="footer-font-height">Thanks for visiting our site</h5>
+            {{!-- <img class="bottom-right pr-4" src="/images/workout-silhouette.png" height="200" width="auto"> --}}
         </footer>
 
     </main>
 
+    <script src='https://cdn.plot.ly/plotly-2.14.0.min.js'></script>
+    <script src="/js/plotly.js"></script>
+
 </body>
 {{#if logged_in}}
-    <script src="/js/logout.js"></script>
-    <script type="text/javascript">
-        const inactivityTime = function () {
+<script src="/js/logout.js"></script>
+<script type="text/javascript">
+    const inactivityTime = function () {
         let time;
         window.onload = resetTimer;
         document.onmousemove = resetTimer;
@@ -68,11 +74,12 @@
             clearTimeout(time);
             time = setTimeout(logout, 300000)
         }
-        };
+    };
 
-        window.onload = function() {
-            inactivityTime();
-        }
-    </script>
-    {{/if}}
+    window.onload = function () {
+        inactivityTime();
+    }
+</script>
+{{/if}}
+
 </html>
