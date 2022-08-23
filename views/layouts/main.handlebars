@@ -24,6 +24,16 @@
             <h1 class="header-font">Work Out Tracker</h1>
         </header>
 
+        {{#if logged_in}}
+            <li class="nav-item">
+                <a class="nav-link" href="/login" id="logout">Logout</a>
+            </li>
+        {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+        {{/if}}
+
         <!-- nav bar -->
         {{!-- <nav class="bg-secondary p-2 d-flex text-light">
             <img class="px-2" src="/images/menu-icon.png" height="50px" width="auto">
