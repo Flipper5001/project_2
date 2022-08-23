@@ -15,7 +15,9 @@
 
 body {
     background-image: url('../images/ropes-backdrop.jpg');
-    background-repeat: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 /* form */
@@ -38,10 +40,12 @@ body {
 /* footer */
 
 #footer {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 100%; */
     font-family: 'Rubik Marker Hatch', cursive;
+    /* flex-shrink: 0; */
+
 }
 
 .footer-font-height {
@@ -99,3 +103,6 @@ a:active {
     font-size: 2em;
 }
 
+.logout-button {
+    margin-left: 46%;
+}
