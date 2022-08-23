@@ -1,8 +1,9 @@
 async function showRatio(){
-    const response = await fetch('api/tags', {
+    const response = await fetch('api/tags/user', {
         method: 'POST',
     }).then(response => response.json())
     .then(tagData => {
+        console.log(tagData)
     let data = [{
     type: 'bar',
     // x relates to y
@@ -24,7 +25,7 @@ async function showRatio(){
     let config = {
         responsive: true
     }
-    Plotly.newPlot('workout-section', data, layout, config);
+    Plotly.newPlot('user-workout-section', data, layout, config);
 })
 }
 

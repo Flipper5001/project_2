@@ -1,0 +1,14 @@
+<article>
+    <section>
+        <h1>{{ workout.name }}</h1>
+        <h4>Posted by {{ workout.user.name }}</h4>
+    </section>
+    <p> {{ workout.description }}</p>
+    <p> {{ workout.duration }}</p>
+    <p> {{ workout.optional }}</p>
+</article>
+<section>
+    <button type="submit" class="submit-btn btn" id="to-dashboard">Add to Dashboard</button>
+</section>
+
+<script src="/js/dashboard.js"></script>

@@ -10,12 +10,6 @@
         <h1 class="dashboard-font">My Dashboard</h1>
     </section>
 
-    <section class="mb-3">
-        {{!-- option to create new post --}}
-        <a class="font-height" href="/new">
-            + New Workout
-        </a>
-    </section>
 
     {{#each workouts as |workout|}}
     <section class="card bg-light mx-4 my-3 col-lg-3 d-flex align-items-stretch form-opacity">
@@ -39,4 +33,14 @@
     </section>
     {{/each}}
 
+    <section class="mb-3">
+        {{!-- option to create new post --}}
+        <a class="font-height" href="/new">
+            + New Workout
+        </a>
+    </section>
+    <section id="user-workout-section"></section>
 </section>
+
+<script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
+<script src="/js/userPlotly.js"></script>
