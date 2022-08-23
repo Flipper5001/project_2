@@ -44,6 +44,12 @@ router.put('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
+
+    const workoutTag = await WorkoutTag.update(req.body, {
+      where: {
+        workout_id: req.params.id
+      }
+    })
     
     if (!workoutData) {
       res.status(404).json({ message: 'No workout with this ID!' });
