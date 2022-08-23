@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Workout } = require('../../models');
+const { Workout, WorkoutTag } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
@@ -9,11 +9,33 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
     });
 
+    const workoutTag = await WorkoutTag.create({
+      tag_id: req.body.tag_id,
+      workout_id: newWorkout.id
+    })
+
     res.status(200).json(newWorkout);
   } catch (err) {
     res.status(400).json(err);
   }
 });
+
+router.post('/:id', async (req, res) => {
+  const originalWorkout = await Workout.findByPk(req.params.id)
+
+  const workout = originalWorkout.get({ plain: true });
+
+  const { name, description, duration, optional } = workout 
+
+  const newWorkoutData = await Workout.create({
+    name,
+    description,
+    duration,
+    optional,
+    user_id: req.session.user_id
+  })
+  res.status(200).json(newWorkoutData);
+})
 
 router.put('/:id', async (req, res) => {
   try {

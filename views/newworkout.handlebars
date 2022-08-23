@@ -16,9 +16,17 @@
         <section class="mb-3">
             <input type="text" name="duration" id="duration" class="form-input">
         </section>
-        <label for="weight-speed">Optional: weight, speed etc.</label>
+        <label for="optional">Optional: weight, speed etc.</label>
         <section class="mb-3">
-            <input type="text" name="weight-speed" id="weight-speed" class="form-input">
+            <input type="text" name="optional" id="optional" class="form-input">
+        </section>
+        <label for="tag-ids">Target Muscle Group:</label>
+        <section>
+            <select id="tag-ids" name="tag-ids" size="3">
+                <option value=1 selected>Core</option>
+                <option value=2>Legs</option>
+                <option value=3>Arms</option>
+            </select>
         </section>
         <button type="submit" class="submit-btn btn" id="create-btn">Submit</button>
     </form>
