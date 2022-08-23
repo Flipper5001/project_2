@@ -20,12 +20,32 @@
         <section class="mb-3 form-opacity">
             <input type="text" name="duration" id="edit-duration" class="form-input" value={{workout.duration}}>
         </section>
-        <label for="weight-speed">Optional: weight, speed etc.</label>
+<<<<<<<<< Temporary merge branch 1
+        <label for="optional">Optional: weight, speed etc.</label>
         <section class="mb-3">
+            <input type="text" name="optional" id="edit-optional" class="form-input" value={{workout.optional}}>
+        </section>
+        <label for="tag-ids">Target Muscle Group:</label>
+        <section>
+            <select id="tag-ids" name="tag-ids" size="3">
+                <option value=1 selected>Core</option>
+                <option value=2>Legs</option>
+                <option value=3>Arms</option>
+            </select>
+        </section>
+        <button type="submit" class="submit-btn btn mb-3" id="edit-btn">Edit Post</button>
+        <button type="submit" class="submit-btn btn" id="delete-btn">Delete Post</button>
+=========
+
+        <label for="weight-speed">Optional: weight, speed etc.</label>
+        <section class="mb-3 form-opacity">
             <input type="text" name="weight-speed" id="edit-weight-speed" class="form-input" value={{workout.optional}}>
         </section>
-                <button type="submit" class="submit-btn btn mb-3" id="edit-btn">Edit Post</button>
-        <button type="submit" class="submit-btn btn" id="delete-btn">Delete Post</button>
+
+        <button type="submit" class="submit-btn btn btn-secondary mb-3" id="edit-btn">Edit Post</button>
+        <button type="submit" class="submit-btn btn btn-secondary mb-3" id="delete-btn">Delete Post</button>
+
+>>>>>>>>> Temporary merge branch 2
     </form>
 
 </section>
