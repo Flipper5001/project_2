@@ -3,11 +3,52 @@
     min-height: 100vh;
 }
 
+/* header */
+
+.header-font {
+    font-family: 'Rubik Marker Hatch', cursive;
+    font-size: 7rem;
+    color: whitesmoke;
+}
+
+/* body */
+
+body {
+    background-image: url('../images/ropes-backdrop.jpg');
+    background-repeat: cover;
+}
+
+/* form */
+
+.form-opacity {
+    opacity: 0.6;
+}
+
+.login-font-lg {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3em;
+    color: black;
+}
+
+.login-font {
+    font-family: 'Fredoka One', cursive;
+    color: black;
+}
+
+/* footer */
+
 #footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    font-family: 'Rubik Marker Hatch', cursive;
 }
+
+.footer-font-height {
+    font-size: 2em;
+}
+
+/* footer pic */
 
 .bottom-right {
     position: absolute;
@@ -15,3 +56,46 @@
     bottom: -5px;
     z-index: 1;
 }
+
+/* a href */
+
+a {
+    font-family: 'Fredoka One', cursive;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+    font-weight: bolder;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    text-decoration: underline;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+/* selected link */
+a:active {
+    color: black;
+}
+
+/* /dashboard */
+
+.dashboard-font {
+    font-family: 'Fredoka One', cursive;
+    color:black;
+}
+
+.font-height {
+    font-size: 2em;
+}
+

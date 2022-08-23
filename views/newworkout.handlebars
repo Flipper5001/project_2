@@ -1,23 +1,27 @@
-<section>
-    <section>
-        <h3>Create New Workout</h3>
+<section class="container d-flex flex-column">
+
+    <section class="d-flex justify-content-center">
+        <h3 class="dashboard-font">Create New Workout</h3>
     </section>
 
-    <form class="form content create-form">
+    <form class="form content create-form mb-5 dashboard-font">
+
         <label for="workout-name">Workout Name:</label>
-        <section class="mb-3">
+        <section class="mb-3 form-opacity">
             <input type="text" name="name" id="workout-name" class="form-input">
         </section>
+
         <label for="description">Description:</label>
-        <section class="mb-3">
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <section class="mb-3 form-opacity">
+            <textarea name="description" id="description" cols="60" rows="6"></textarea>
         </section>
+
         <label for="duration">Duration:</label>
-        <section class="mb-3">
+        <section class="mb-3 form-opacity">
             <input type="text" name="duration" id="duration" class="form-input">
         </section>
         <label for="optional">Optional: weight, speed etc.</label>
-        <section class="mb-3">
+        <section class="mb-1 form-opacity">
             <input type="text" name="optional" id="optional" class="form-input">
         </section>
         <label for="tag-ids">Target Muscle Group:</label>
@@ -28,8 +32,11 @@
                 <option value=3>Arms</option>
             </select>
         </section>
-        <button type="submit" class="submit-btn btn" id="create-btn">Submit</button>
+
+        <button type="submit" class="submit-btn btn btn-secondary mb-3" id="create-btn">Submit</button>
+
     </form>
+
 </section>
 
 <script src="./js/workout.js"></script>

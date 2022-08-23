@@ -1,23 +1,27 @@
-<section>
-    <section>
-        <h3>Edit Workout</h3>
+<section class="container d-flex flex-column">
+
+    <section class="d-flex justify-content-center">
+        <h3 class="dashboard-font">Edit Workout</h3>
     </section>
 
-    <form class="form content edit-form">
+    <form class="form content edit-form mb-5 dashboard-font">
+
         <label for="workout-name">Workout Name:</label>
-        <section class="mb-3">
+        <section class="mb-3 form-opacity">
             <input type="text" name="name" id="edit-name" class="form-input" value={{workout.name}}>
         </section>
+
         <label for="description">Description:</label>
-        <section class="mb-3">
+        <section class="mb-3 form-opacity">
             <textarea name="description" id="edit-description" cols="30" rows="10">{{workout.description}}</textarea>
         </section>
+
         <label for="duration">Duration:</label>
-        <section class="mb-3">
+        <section class="mb-3 form-opacity">
             <input type="text" name="duration" id="edit-duration" class="form-input" value={{workout.duration}}>
         </section>
         <label for="optional">Optional: weight, speed etc.</label>
-        <section class="mb-3">
+        <section class="mb-3 form-opacity">
             <input type="text" name="optional" id="edit-optional" class="form-input" value={{workout.optional}}>
         </section>
         <label for="tag-ids">Target Muscle Group:</label>
@@ -28,9 +32,10 @@
                 <option value=3>Arms</option>
             </select>
         </section>
-        <button type="submit" class="submit-btn btn mb-3" id="edit-btn">Edit Post</button>
-        <button type="submit" class="submit-btn btn" id="delete-btn">Delete Post</button>
+        <button type="submit" class="submit-btn btn btn-secondary mb-3" id="edit-btn">Edit Post</button>
+        <button type="submit" class="submit-btn btn btn-secondary mb-3" id="delete-btn">Delete Post</button>
     </form>
+
 </section>
 
 <script src="/js/update.js"></script>
