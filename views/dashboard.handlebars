@@ -2,20 +2,9 @@
 
 {{!-- {{#each}}
 {{/each}} --}}
-
-
-<section class="container d-flex flex-column">
-
-    <section class="d-flex justify-content-center py-2 mb-3">
-        <h1 class="dashboard-font">My Dashboard</h1>
-    </section>
-
-    <section class="mb-3">
-        {{!-- option to create new post --}}
-        <a class="font-height" href="/new">
-            + New Workout
-        </a>
-    </section>
+<section>
+    <h1>My Dashboard</h1>
+</section>
 
     {{#each workouts as |workout|}}
     <section class="card bg-light mx-4 my-3 col-lg-3 d-flex align-items-stretch form-opacity">
@@ -35,8 +24,10 @@
             {{!-- workout weight or speed --}}
             <p class="card-text dashboard-font">Weight/Speed: {{optional}}</p>
 
-        </section>
     </section>
-    {{/each}}
-
+</section>
+{{/each}}
+<section>
+    {{!-- option to create new post --}}
+    <a href="/new"><h1>+ New Workout</h1></a>
 </section>

@@ -80,7 +80,7 @@ router.get('/workouts/:id', async (req, res) => {
 // login auth to ensure user is logged in prior to access page
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
-      // find all posts
+      // find all workouts
       const workoutData = await Workout.findAll({
           where: {
               user_id: req.session.user_id,
@@ -92,9 +92,11 @@ router.get('/dashboard', withAuth, async (req, res) => {
               }
           ],
       });
+      
       // convert to plain to read data
       const workouts = workoutData.map((workout) => workout.get({ plain: true }));
-      // render post page with logged in true and display relevant posts
+
+      // render post page with logged in true and display relevant workouts
       res.render('dashboard', {
           workouts,
           logged_in: req.session.logged_in
