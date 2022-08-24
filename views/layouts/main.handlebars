@@ -20,9 +20,28 @@
     <main id="page-container">
 
         <!-- fix style, just knocking up quick design -->
-        <header class="container-fluid p-3 d-flex justify-content-center text-light">
+        <header class="container-fluid p-3 d-flex justify-content-center header-background">
             <h1 class="header-font">Work Out Tracker</h1>
         </header>
+
+        <ul class="nav header-background d-flex justify-content-center">
+            <li class="nav-item mr-5">
+                <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            {{!-- check if user if logged in for which option to present --}}
+            {{#if logged_in}}
+            <li class="nav-item">
+                <a class="nav-link" href="/login" id="logout">Logout</a>
+            </li>
+            {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            {{/if}}
+        </ul>
 
         <!-- nav bar -->
         {{!-- <nav class="bg-secondary p-2 d-flex text-light">
@@ -41,17 +60,6 @@
             {{{body}}}
         </section>
 
-        {{#if logged_in}}
-        <section class="">
-            <li class="nav-item d-flex mb-4">
-                <a class="nav-link logout-button" href="/login" id="logout">Log Out</a>
-            </li>
-            {{else}}
-            <li class="nav-item d-flex mb-4">
-                <a class="nav-link logout-button" href="/login">Login</a>
-            </li>
-        </section>
-        {{/if}}
 
         <!-- position image bottom right -->
         {{!-- <img class="bottom-right pr-4" src="/images/workout-silhouette.png" height="200" width="auto"> --}}

@@ -32,7 +32,12 @@ router.post('/:id', async (req, res) => {
     description,
     duration,
     optional,
-    user_id: req.session.user_id
+    user_id: req.session.user_id,
+  })
+
+  const workoutTag = await WorkoutTag.create({
+    workout_id: newWorkoutData.id,
+    tag_id: 1
   })
   res.status(200).json(newWorkoutData);
 })
@@ -44,6 +49,12 @@ router.put('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
+
+    const workoutTag = await WorkoutTag.update(req.body, {
+      where: {
+        workout_id: req.params.id
+      }
+    })
     
     if (!workoutData) {
       res.status(404).json({ message: 'No workout with this ID!' });

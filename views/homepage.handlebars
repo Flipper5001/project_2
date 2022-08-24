@@ -1,21 +1,33 @@
+<section class="">
+
+{{#if logged_in}}
 {{#each workouts as |workout|}}
 <section class="card bg-light mx-4 my-3 col-lg-3 d-flex align-items-stretch form-opacity">
     <section class="card-body">
+
         {{!-- workout name --}}
         <a href="/workouts/{{workout.id}}">
             <h3 class="card-title">{{name}}</h3>
         </a>
+
         {{!-- workout description --}}
         <p class="card-text dashboard-font">{{description}}</p>
+
         {{!-- workout duration --}}
         <p class="card-text dashboard-font">Duration: {{duration}}</p>
+
         {{!-- workout weight or speed --}}
         <p class="card-text dashboard-font">Weight/Speed: {{optional}}</p>
+
     </section>
 </section>
 {{/each}}
-<section class="container d-flex flex-column">
+{{/if}}
+</section>
+
+<section class="container d-flex flex-column">  
     <section id="workout-section"></section>
 </section>
+
 <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
 <script src="/js/plotly.js"></script>
