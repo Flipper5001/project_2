@@ -3,19 +3,26 @@
     min-height: 100vh;
 }
 
+.header-background {
+    /* background-image: linear-gradient( rgb(80, 80, 80, 0.5), rgba(255,0,0,0)); */
+    background-color: rgba(94, 94, 94, 0.5);
+}
+
 /* header */
 
 .header-font {
     font-family: 'Rubik Marker Hatch', cursive;
     font-size: 7rem;
-    color: whitesmoke;
+    color: rgb(0, 0, 0) ;
 }
 
 /* body */
 
 body {
     background-image: url('../images/ropes-backdrop.jpg');
-    background-repeat: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 /* form */
@@ -42,6 +49,7 @@ body {
     bottom: 0;
     width: 100%;
     font-family: 'Rubik Marker Hatch', cursive;
+    flex-shrink: 0;
 }
 
 .footer-font-height {
