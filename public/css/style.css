@@ -107,3 +107,8 @@ a:active {
     font-size: 2em;
 }
 
+/* nav bar href over ride */
+
+.override:hover {
+    padding: 5px 20px 5px 20px;
+}

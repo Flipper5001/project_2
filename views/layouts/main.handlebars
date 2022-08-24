@@ -26,19 +26,19 @@
 
         <ul class="nav header-background d-flex justify-content-center">
             <li class="nav-item mr-5">
-                <a class="nav-link active" href="/">Home</a>
+                <a class="nav-link active override" href="/">Home</a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href="/dashboard">Dashboard</a>
+                <a class="nav-link override" href="/dashboard">Dashboard</a>
             </li>
             {{!-- check if user if logged in for which option to present --}}
             {{#if logged_in}}
             <li class="nav-item">
-                <a class="nav-link" href="/login" id="logout">Logout</a>
+                <a class="nav-link override" href="/login" id="logout">Logout</a>
             </li>
             {{else}}
             <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link override" href="/login">Login</a>
             </li>
             {{/if}}
         </ul>

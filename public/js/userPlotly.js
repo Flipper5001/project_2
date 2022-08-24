@@ -19,7 +19,8 @@ async function showRatio(){
         paper_bgcolor: 'rgba(0,0,0,0)',
         plot_bgcolor: 'rgba(0,0,0,0)',
         font: {
-            color: 'black'
+            color: 'black',
+            size: 24
         }
     }
     let config = {
