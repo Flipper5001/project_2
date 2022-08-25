@@ -11,12 +11,15 @@ async function showRatio(){
     orientation: 'h'
     }];
     let layout = {
-        title: "Workout Ratio",
+        title: "All Workouts",
+        autosize: false,
+        width: 500,
+        height: 300,
         xaxis: {
             range: []
         },
-        paper_bgcolor: 'rgba(0,0,0,0)',
-        plot_bgcolor: 'rgba(0,0,0,0)',
+        paper_bgcolor: 'rgba(255,255,255,0.7)',
+        plot_bgcolor: 'rgba(255,255,255,0)',
         font: {
             color: 'black',
             size: 24
