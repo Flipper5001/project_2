@@ -5,30 +5,47 @@
 
 .header-background {
     /* background-image: linear-gradient( rgb(80, 80, 80, 0.5), rgba(255,0,0,0)); */
-    background-color: rgba(94, 94, 94, 0.5);
+    background-color: rgba(37, 37, 37, 0.9);
 }
+
+.quotes {
+   font-size: 20px;
+}
+
 
 /* header */
 
 .header-font {
     font-family: 'Rubik Marker Hatch', cursive;
     font-size: 7rem;
-    color: rgb(0, 0, 0) ;
+    color: rgb(255, 255, 255) ;
 }
 
 /* body */
 
 body {
-    background-image: url('../images/ropes-backdrop.jpg');
+    background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
+textarea {
+    width: 100%;
+}
+
 /* form */
 
-.form-opacity {
-    opacity: 0.6;
+.cards {
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.new {
+    background-color: rgba(219, 219, 219, 0.8);
+    /* width: 300px;
+    transform: translate(135%); */
 }
 
 .login-font-lg {
@@ -42,6 +59,19 @@ body {
     color: black;
 }
 
+.submit-btn {
+    border: none;
+}
+
+.submit-btn:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+.select-section {
+    font-size: 24px;
+    width: 100px;
+}
+
 /* footer */
 
 #footer {
@@ -53,7 +83,7 @@ body {
 }
 
 .footer-font-height {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 /* footer pic */
@@ -83,12 +113,25 @@ a:visited {
 }
 
 /* mouse over link */
-a:hover {
+/* a:hover {
     color: hotpink;
     text-decoration: underline;
     background-color: white;
     padding: 20px;
     border-radius: 4px;
+} */
+
+.nav-link {
+    font-size: 25px;
+}
+
+.nav-item>a {
+    color: white;
+}
+
+.nav-link:hover {
+    color: rgb(41, 119, 184);
+    background-color: rgb(240, 240, 240);
 }
 
 /* selected link */
@@ -107,3 +150,8 @@ a:active {
     font-size: 2em;
 }
 
+/* nav bar href over ride */
+
+.override:hover {
+    padding: 5px 20px 5px 20px;
+}
