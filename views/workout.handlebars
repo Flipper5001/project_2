@@ -1,14 +1,30 @@
-<article>
-    <section>
-        <h1>{{ workout.name }}</h1>
-        <h4>Posted by {{ workout.user.name }}</h4>
+<section class="d-flex justify-content-center pt-5">
+
+<section class="cards mx-4 my-3 col-lg-3 d-flex">
+
+    <section class="card-body">
+
+        <article>
+            <section>
+                <h1 class="dashboard-font">{{ workout.name }}</h1>
+                <h4 class="dashboard-font">Posted by {{ workout.user.name }}</h4>
+            </section>
+            <p class="card-text dashboard-font"> {{ workout.description }}</p>
+            <p class="card-text dashboard-font"> {{ workout.duration }}</p>
+            <p class="card-text dashboard-font"> {{ workout.optional }}</p>
+            <p class="card-text dashboard-font"> {{ workout.tag_id }} </p>
+        </article>
+        <section>
+            <button type="submit" class="submit-btn btn btn-secondary" id="to-dashboard">Add to Dashboard</button>
+        </section>
+
     </section>
-    <p> {{ workout.description }}</p>
-    <p> {{ workout.duration }}</p>
-    <p> {{ workout.optional }}</p>
-</article>
-<section>
-    <button type="submit" class="submit-btn btn" id="to-dashboard">Add to Dashboard</button>
+
 </section>
+
+</section>
+
+
+
 
 <script src="/js/dashboard.js"></script>

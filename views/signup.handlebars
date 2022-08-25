@@ -1,24 +1,24 @@
 {{!-- log in form --}}
 {{!-- user, pass, log in button --}}
-<section class="container d-flex flex-column">
+<section class="container d-flex flex-column cards mt-5">
 
   {{!-- <section>
     <h3>Signup</h3>
   </section> --}}
 
   <form class="form signup-form content login-font mt-4">
-      <label for="user-signup">User Name:</label>
-      <section class="mb-3">
-        <input class="form-input form-opacity" type="text" id="user-signup" />
+      <label for="user-signup" class="ml-4">User Name:</label>
+      <section class="mb-3 mx-4">
+        <input class="form-input" type="text" id="user-signup" />
       </section>
-      <label for="password-signup">Password?</label>
-      <section class="mb-3">
-        <input class="form-input form-opacity" type="password" id="password-signup" />
+      <label for="password-signup" class="ml-4">Password:</label>
+      <section class="mb-3 mx-4">
+        <input class="form-input" type="password" id="password-signup" />
       </section>
-      <button class="submit-btn btn btn-lg my-4 button-margin" type="submit">Signup</button>
+      <button class="submit-btn btn btn-secondary my-4 ml-4" type="submit">Signup</button>
   </form>
 
-  <section class="py-3">
+  <section class="py-3 ml-4">
   <a href="/login">Login instead</a>
   </section>
 

@@ -1,4 +1,4 @@
-const { WorkoutTag, Workout, User, Tag } = require('../../models');
+const { WorkoutTag, Workout, Tag } = require('../../models');
 
 const router = require('express').Router();
 

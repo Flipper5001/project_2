@@ -11,7 +11,7 @@ async function updateWorkout(event) {
     const description = document.querySelector('#edit-description').value.trim();
     const duration = document.querySelector('#edit-duration').value.trim();
     const optional = document.querySelector('#edit-optional').value.trim();
-  const tag_id = document.querySelector('#edit-tags').value;
+    const tag_id = document.querySelector('#edit-tags').value;
 
   
     if (name && description && duration) {
