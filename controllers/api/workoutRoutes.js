@@ -76,6 +76,12 @@ router.delete('/:id', withAuth, async (req, res) => {
       },
     });
 
+    const workoutTag = await WorkoutTag.destroy({
+      where: {
+        workout_id: req.params.id
+      }
+    })
+
     if (!workoutData) {
       res.status(404).json({ message: 'No workout with this ID!' });
       return;
