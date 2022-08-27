@@ -2,10 +2,10 @@
 
 {{!-- {{#each}}
 {{/each}} --}}
-<section class="text-center d-flex justify-content-center mt-4">
-    <h1 class="p-3 cards quotes">If you are unfit, just get fit -Mozart</h1>
-    <h1 class="p-3 ml-4 cards quotes">If Ice cream is mentioned, do 10 push ups -Sam</h1>
-    <h1 class="p-3 ml-4 cards quotes">When you see a pizza, do 5 situps -James</h1>
+<section class="text-center d-flex justify-content-center mt-4 resize-column">
+    <h1 class="p-3 mx-2 cards quotes">If you are unfit, just get fit -Mozart</h1>
+    <h1 class="p-3 mx-2 cards quotes">If Ice cream is mentioned, do 10 push ups -Sam</h1>
+    <h1 class="p-3 mx-2 cards quotes">When you see a pizza, do 5 situps -James</h1>
 </section>
 
 <section class="container d-flex flex-column">
@@ -16,7 +16,7 @@
 
     <section class="mt-5 d-flex justify-content-center cards new">
         {{!-- option to create new post --}}
-        <a class="font-height" href="/new">
+        <a class="font-height new-workout-large" href="/new">
             + New Workout
         </a>
     </section>
@@ -46,9 +46,14 @@
     </section>
 
 
-    <section class="container d-flex flex-column mt-5 align-items-center plotly-padding">
+    <section class="container d-flex flex-column mt-5 align-items-center">
         <section id="user-workout-section"></section>
     </section>
+
+    <section class="container d-flex flex-column mt-1 align-items-center">
+        <section id="user-workout-resize"></section>
+    </section>
+
 </section>
 
 <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>

@@ -9,16 +9,15 @@
 }
 
 .quotes {
-   font-size: 20px;
+    font-size: 20px;
 }
-
 
 /* header */
 
 .header-font {
     font-family: 'Rubik Marker Hatch', cursive;
     font-size: 7rem;
-    color: rgb(255, 255, 255) ;
+    color: rgb(255, 255, 255);
 }
 
 /* body */
@@ -86,8 +85,16 @@ textarea {
     font-size: 1.5em;
 }
 
-.plotly-padding {
-    padding-bottom: 7%;
+/* .plotly-padding { */
+/* this shouldn't be needed with empty div fix */
+/* padding-bottom: 7%; */
+/* } */
+
+/* footer empty div */
+
+.clear {
+    clear: both;
+    height: 60px;
 }
 
 /* footer pic */
@@ -147,7 +154,7 @@ a:active {
 
 .dashboard-font {
     font-family: 'Fredoka One', cursive;
-    color:black;
+    color: black;
 }
 
 .font-height {
@@ -158,4 +165,113 @@ a:active {
 
 .override:hover {
     padding: 5px 20px 5px 20px;
+}
+
+/* media queries */
+
+/* header */
+@media screen and (max-width: 1060px) {
+    .header-font {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 632px) {
+    .header-font {
+        font-size: 3rem;
+    }
+
+    /* footer */
+    .footer-font-height {
+        font-size: 1em;
+    }
+
+    #workout-section {
+        height: 400px;
+        width: 200px;
+    }
+
+    .plotly-padding {
+        height: 400px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header-font {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 342px) {
+    .header-font {
+        font-size: 1.5rem;
+    }
+
+    /* footer */
+    .footer-font-height {
+        font-size: 0.8em;
+    }
+}
+
+/* nav links */
+
+@media screen and (max-width: 390px) {
+    .nav-link {
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+}
+
+/* plotly resize */
+
+@media screen and (max-width: 636px) {
+    #workout-section {
+        display: none;
+    }
+
+    #user-workout-section {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 636px) {
+    #workout-section-resize {
+        display: none;
+    }
+
+    #user-workout-resize {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #workout-section-resize {
+        display: none;
+    }
+
+    #user-workout-resize {
+        display: none;
+    }
+}
+
+/* create workout */
+
+@media screen and (max-width: 342px) {
+    .resize-create {
+        font-size: 1.5em;
+    }
+}
+
+/* dashboard */
+
+@media screen and (max-width: 400px)  {
+    .resize-column {
+        flex-direction: column;
+        align-content: center;
+    }
 }
